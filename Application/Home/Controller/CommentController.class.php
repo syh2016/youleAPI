@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class AppController extends Controller {
+class CommentController extends Controller {
 	/**
 	 * 评论列表
 	 * @author  syh

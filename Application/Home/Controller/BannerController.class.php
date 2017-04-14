@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class AppController extends Controller {
+class BannerController extends Controller {
 	/**
 	 * 推荐页广告
 	 * @author  syh
