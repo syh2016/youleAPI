@@ -4,13 +4,54 @@
 function p($data)
 {
     echo '<pre>';
-	print_r(json_decode($data));
+	print_r($data);
     exit();
 }
 
-
-// 加密
-function encrypt($str){
+/**
+ * token加密算法
+ * @author  syh
+ * @param     string   文件名
+ * @param   string   文件内容
+ * @return  boolean         
+ */
+function encrypt($string,$operation,$key=''){ 
+    $key=md5($key); 
+    $key_length=strlen($key); 
+      $string=$operation=='D'?base64_decode($string):substr(md5($string.$key),0,8).$string; 
+    $string_length=strlen($string); 
+    $rndkey=$box=array(); 
+    $result=''; 
+    for($i=0;$i<=255;$i++){ 
+           $rndkey[$i]=ord($key[$i%$key_length]); 
+        $box[$i]=$i; 
+    } 
+    for($j=$i=0;$i<256;$i++){ 
+        $j=($j+$box[$i]+$rndkey[$i])%256; 
+        $tmp=$box[$i]; 
+        $box[$i]=$box[$j]; 
+        $box[$j]=$tmp; 
+    } 
+    for($a=$j=$i=0;$i<$string_length;$i++){ 
+        $a=($a+1)%256; 
+        $j=($j+$box[$a])%256; 
+        $tmp=$box[$a]; 
+        $box[$a]=$box[$j]; 
+        $box[$j]=$tmp; 
+        $result.=chr(ord($string[$i])^($box[($box[$a]+$box[$j])%256])); 
+    } 
+    if($operation=='D'){ 
+        if(substr($result,0,8)==substr(md5(substr($result,8).$key),0,8)){ 
+            return substr($result,8); 
+        }else{ 
+            return''; 
+        } 
+    }else{ 
+        return str_replace('=','',base64_encode($result)); 
+    } 
+}
+// 用户密码
+function password($str){
 	return md5(C("AUTH_CODE").$str);
 }
 
@@ -23,7 +64,32 @@ function check_mobile($mobile){
         return true;
     return false;
 }
+/**
+ * 检查用户码密码格式
+ * @param $mobile 手机号码
+ */
+function isPassword($password){
+    if(preg_match('/^[a-zA-Z]\w{5,17}$/',$password))
+        return true;
+    return false;
+}
+// 删除空元素
+function delEmpty($data)
+{
+    if(empty($data)) return ;
 
+    if (is_array($data)) {
+      return  $result=array_map(function($a){
+                if (!empty($a)) {
+                    return  trim($a);
+                }
+            }, $data);
+    }
+
+    if (is_string($data)) {
+        return trim($data);
+    }
+}
 /**
  * CURL请求
  * @param $url 请求url地址

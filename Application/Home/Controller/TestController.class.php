@@ -8,16 +8,23 @@ class TestController extends Controller {
 	{
 		$url="http://www.youle.com/index.php/Home/User/register";
 		$data=[
-			'mobile'=> '',
-			'password1'=>111,
-			'password2'=>112,
+			'mobile'=> 15811205357,
+			'password1'=>a11111,
+			'password2'=>a11111,
 			'code'=>1234,
 			'unique_id'=>11,
 		];
 		$res=httpRequest($url,'post',$data);
-		p($res);
+		// p($res);
+		echo $res;
 		 // var_dump($res);
 		
 	}
+
+	public function test()
+	{
+		 
+	}
+
 
 }

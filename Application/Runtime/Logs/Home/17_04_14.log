@@ -1224,3 +1224,111 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000831s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
 
+[ 2017-04-14T20:07:42+08:00 ] 127.0.0.1 /index.php/Home/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000993s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001104s ]
+SQL: SHOW COLUMNS FROM `table_user` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `table_user` WHERE `phone` = '15811205357'  [ RunTime:0.0113s ]
+
+[ 2017-04-14T20:07:42+08:00 ] 127.0.0.1 /index.php/Home/Test/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+
+[ 2017-04-14T20:08:19+08:00 ] 127.0.0.1 /index.php/Home/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+SQL: SHOW COLUMNS FROM `table_user` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `table_user` WHERE `phone` = '15811205357'  [ RunTime:0.0052s ]
+
+[ 2017-04-14T20:08:19+08:00 ] 127.0.0.1 /index.php/Home/Test/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+
+[ 2017-04-14T20:08:35+08:00 ] 127.0.0.1 /index.php/Home/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+NOTIC: [2] Missing argument 3 for Common\Controller\BaseController::returnJson(), called in D:\phpStudy\WWW\youleAPI\Application\Home\Controller\UserController.class.php on line 21 and defined D:\phpStudy\WWW\youleAPI\Application\Common\Controller\BaseController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: data D:\phpStudy\WWW\youleAPI\Application\Common\Controller\BaseController.class.php 第 24 行.
+
+[ 2017-04-14T20:08:35+08:00 ] 127.0.0.1 /index.php/Home/Test/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000929s ]
+
+[ 2017-04-14T20:08:48+08:00 ] 127.0.0.1 /index.php/Home/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `table_user` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `table_user` WHERE `phone` = '15811205357'  [ RunTime:0.0071s ]
+
+[ 2017-04-14T20:08:48+08:00 ] 127.0.0.1 /index.php/Home/Test/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+
+[ 2017-04-14T20:09:04+08:00 ] 127.0.0.1 /index.php/Home/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000960s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+NOTIC: [2] Missing argument 3 for Common\Controller\BaseController::returnJson(), called in D:\phpStudy\WWW\youleAPI\Application\Home\Controller\UserController.class.php on line 25 and defined D:\phpStudy\WWW\youleAPI\Application\Common\Controller\BaseController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: data D:\phpStudy\WWW\youleAPI\Application\Common\Controller\BaseController.class.php 第 24 行.
+
+[ 2017-04-14T20:09:04+08:00 ] 127.0.0.1 /index.php/Home/Test/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+
+[ 2017-04-14T20:09:27+08:00 ] 127.0.0.1 /index.php/Home/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000961s ]
+NOTIC: [2] Missing argument 3 for Common\Controller\BaseController::returnJson(), called in D:\phpStudy\WWW\youleAPI\Application\Home\Controller\UserController.class.php on line 21 and defined D:\phpStudy\WWW\youleAPI\Application\Common\Controller\BaseController.class.php 第 22 行.
+NOTIC: [8] Undefined variable: data D:\phpStudy\WWW\youleAPI\Application\Common\Controller\BaseController.class.php 第 24 行.
+
+[ 2017-04-14T20:09:27+08:00 ] 127.0.0.1 /index.php/Home/Test/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+

@@ -17,59 +17,58 @@ class UserController extends BaseController {
 		$optional=['unique_id'];//可选
 
 		 
-		if(!$this->verifyArgs($required)){
-			return 	$this->returnJson(0,'缺少参数');
+		if(!$this->verifyArgs($required))
+		{
+			return 	$this->returnJson(-1,'缺少参数');
 		};
 
-		if(!check_mobile($this->user['mobile'])){	
-			return $this->returnJson(-1,'非法手机号');
-		}else{
-			
-			$Users=M('user');
-			$res=$Users->where(['phone'=>$this->user['mobile']])->select();
-			if (!empty($res)) {
-				return $this->returnJson(-2,'已注册');
-			}
-
-			
-			if ($this->user['password1']!==$this->user['password2'])
-			{
-				return  $this->ajaxReturn(['code'=>-1,'msg'=>'两次密码不一致']);
-			}
-
-			
+		if(!check_mobile($this->user['mobile']))
+		{	
+			return $this->returnJson(-2,'非法手机号');
+		}
+		
+		
+		
+		$Users=M('user');
+		$res=$Users->where(['mobile'=>$this->user['mobile']])->select();
+		if (!empty($res))
+		{
+			return $this->returnJson(-3,'已注册');
 		}
 
+			
+		if ($this->user['password1']!==$this->user['password2'])
+		{
+			return $this->returnJson(-4,'两次密码不一致');
+		}
 
-		
+		if(isPassword($this->user['password1'])){
 
-			 
- 		// return $res;
 
-		// var_dump($res);
-		// {
-  //   		return array('status'=>-1,'msg'=>'账号已存在');
-  //   	}
+			$add_data=[
+				'mobile'        => $this->user['mobile'],
+				'password'      => password($this->user['password1']),
+				'register_time' =>time(),
+			];
 
-		// if ($password1!==$password2)
-		// {
-		// 	return  $this->ajaxReturn(['code'=>-1,'msg'=>'两次密码不一致']);
-		// }
-
-  //   	$user['password'] = encrypt($user['password']);
-  //   	$user['reg_time'] = time();
-  //   	$user_id = M('users')->add($user);
-  //   	if(!$user_id){
-  //   		return array('status'=>-1,'msg'=>'添加失败');
-
+			$res=$Users->add($add_data);
+			if ($res)
+			{
+				return $this->returnJson(200,'注册成功',$arr);
+			}else{
+				return $this->returnJson(0,'系统错误',$arr);
+				
+			}
+		}
+		else
+		{
+			
+			return $this->returnJson(-5,'密码必须6-18为字母数字下划线');
+		}
+		 
 		 
 
-		// $data=[
-		// 	'phone'=>$mobile,
-		// 	'phone'=>$mobile,
-		// ]
-		// $res=M('user')->add(md5());
-		// dump($res);
+	
 	}
 
 	/**
